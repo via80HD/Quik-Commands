@@ -1,8 +1,9 @@
 # Quik-Commands-
 A reference guide to quickly run a whole littny orlf things on your Linux PC. (Unless explicitly mentioned)
 
+Ubuntu/Debian Commands
 
-| Function Of Command                                                                                             | Command To Copy                                                                                                                                                                                                                                                                                                       |
+| Function Of Command                                                                                             | Command To Copy           |
 |-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Copy File To Another Place                                                                                      | `cp <current/path>` <destination/path>                                                                                                                                                                                                                                         |
 | Create a .txt File of All Installed Apps                                                                        | ```apt list –installed > .txt```                                                                                                                                                                                                                                                  |
