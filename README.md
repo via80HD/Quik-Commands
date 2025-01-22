@@ -28,3 +28,10 @@ Ubuntu/Debian Commands
 | Delete All Files In a Folder Of A Specific Extension                                                            | `rm *.<extension>`<br> Example: `rm *.wav`                                                                                                                                                                                                                                    |
 | To start the Bluetooth service                                                                                  | `sudo systemctl start bluetooth.service`                                                                                                                                                                                                                                       |
 | If you are using a Bluetooth dongle, you may need to use this first                                             | `modprobe btusb`                                                                                                                                                                                                                                                               |
+
+Flatpak Commands
+
+| Function Of Command                                             | Command To Copy                                                                                     |
+|-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| To See All Columns Of A "flatpak search" command                | `flatpak search <insert search item here> --columns all`                                           |
+| To See The Full Text of The Application ID Column               | `flatpak search --columns=name,description,application:f,version,branch,remotes <app name>`        |
