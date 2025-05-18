@@ -1,8 +1,10 @@
 # Quik-Commands-
 A reference guide to quickly run a whole littny of commands etc on your Linux PC. (Unless explicitly mentioned)
 
-[View the Command Table](https://via80hd.github.io/Quik-Commands-/commands.html)
+[View the Command Table](https://via80hd.github.io/Quik-Commands-/commands.html) <br>
+
 [Take A Gander At That There DiggaDer](https://via80hd.github.io/Quik-Commands-/commandstable.html)
+
 Ubuntu/Debian Commands
 
 | Function Of Command                                                                                             | Command To Copy           |
