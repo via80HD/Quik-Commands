@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Command Reference Table</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: linear-gradient(135deg, rgb(40, 103, 48) 12%, rgba(255, 255, 255, 0) 42%, rgb(25, 105, 24) 63%, rgb(0, 208, 130) 100%);
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+    .styled-table th, .styled-table td {
+      padding: 12px 15px;
+      border: 1px solid #dddddd;
+      text-align: center;
+    }
+    .styled-table thead {
+      background-color: #009879;
+    }
+    .copy-btn {
+      padding: 6px 12px;
+      background-color: #006f5f;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .copy-btn:hover {
+      background-color: #004f3f;
+    }
+    code {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 2px 4px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>Function Of Command</th>
+      <th>Command To Copy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Copy File To Another Place</td>
+      <td>
+        <code>cp &lt;current/path&gt; &lt;destination/path&gt;</code><br>
+        <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Create a .txt File of All Installed Apps</td>
+      <td>
+        <code>apt list --installed &gt; installed_apps.txt</code><br>
+        <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Combine Multiple .mp3 Files Into 1 Mp3</td>
+      <td>
+        <code>sudo apt-get install mp3wrap</code><br>
+        <code>mp3wrap output.mp3 *.mp3</code><br>
+        <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+<script>
+  function copyToClipboard(button) {
+    const codes = button.parentElement.querySelectorAll('code');
+    let textToCopy = '';
+    codes.forEach(code => {
+      textToCopy += code.textContent + '\n';
+    });
+    navigator.clipboard.writeText(textToCopy.trim()).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => {
+        button.textContent = 'Copy';
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  }
+</script>
+
+</body>
+</html>
