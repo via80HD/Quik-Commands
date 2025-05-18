@@ -1,7 +1,7 @@
 # Quik-Commands-
 A reference guide to quickly run a whole littny of commands etc on your Linux PC. (Unless explicitly mentioned)
 
-[View the Command Table](https://<your-username>.github.io/<repo-name>/commands.html)
+[View the Command Table](https://via80hd.github.io/Quik-Commands-/commands.html)
 
 Ubuntu/Debian Commands
 
