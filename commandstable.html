@@ -74,10 +74,16 @@
    </tr>
  </thead>
  <tbody>
-   <tr><td>Start Bluetooth</td><td>```
-   sudo systemctl start bluetooth.service```
-   </td></tr>
-  <tr><td>Example Row 2</td><td>Command or Data</td></tr>
+  <tr><td>Start Bluetooth</td><td>sudo systemctl start bluetooth.service</td></tr>
+  <tr><td>sudo systemctl start bluetooth.service</td><td>modprobe btusb</td></tr>
+  <tr><td>Combo of Commands That Some How Got BT working If Only For A Bit</td><td>
+  1. cd /lib/modules && ls<br>
+  2. Verify that you see 6.12.21-amd64 (if you don't then idk look it up)<br>
+  3. run commands:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;'sudo rmmod btusb' if no error next run<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;'sudo modprobe btusb' if no error run<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;'hcitool scan' which will scan for BT devices
+</td></tr>
  </tbody>
 </table>
 
