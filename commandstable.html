@@ -139,3 +139,50 @@ function copyCode(id) {
 
 </body>
 </html>
+
+  <style>
+.copy-box {
+  position: relative;
+  background: #2d2d2d;
+  color: #f8f8f2;
+  font-family: Consolas, monospace;
+  padding: 1em;
+  border-radius: 8px;
+  overflow: auto;
+  margin-bottom: 1em;
+  border: 1px solid #444;
+}
+.copy-box code {
+  white-space: pre-wrap;
+}
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.copy-btn:hover {
+  background-color: #006f98;
+}
+</style>
+
+<div class="copy-box" id="copy1">
+  <button class="copy-btn" onclick="copyCode('copy1')">Copy</button>
+  <code>
+yt-dlp -x --audio-format wav https://www.youtube.com/watch?v=bJEiV0M5kGE
+  </code>
+</div>
+
+<script>
+function copyCode(id) {
+  const el = document.getElementById(id).querySelector('code');
+  navigator.clipboard.writeText(el.innerText.trim())
+    .then(() => alert("Copied!"));
+}
+</script>
