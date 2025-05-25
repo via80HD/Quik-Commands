@@ -98,100 +98,7 @@
 
   </hr>
   
-  <!DOCTYPE html>
-<html>
-<head>
-  <style>
-    .code-box {
-      position: relative;
-      background: #f5f5f5;
-      border: 1px solid #ccc;
-      padding: 1em;
-      font-family: monospace;
-      white-space: pre;
-    }
-    .copy-btn {
-      position: absolute;
-      top: 0.5em;
-      right: 0.5em;
-      padding: 0.2em 0.5em;
-      font-size: 0.9em;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-<div class="code-box" id="code1">
-  <button class="copy-btn" onclick="copyCode('code1')">Copy</button>
-<code>
-yt-dlp -x --audio-format wav https://www.youtube.com/watch?v=bJEiV0M5kGE
-</code>
-</div>
-
-<script>
-function copyCode(id) {
-  const box = document.getElementById(id);
-  const code = box.querySelector('code').innerText;
-  navigator.clipboard.writeText(code).then(() => {
-    alert('Copied!');
-  });
-}
-</script>
-
-</body>
-</html>
-
-</body>
-
-</html>
-</hr>
   
-  <style>
-.copy-box {
-  position: relative;
-  background: #2d2d2d;
-  color: #f8f8f2;
-  font-family: Consolas, monospace;
-  padding: 1em;
-  border-radius: 8px;
-  overflow: auto;
-  margin-bottom: 1em;
-  border: 1px solid #444;
-}
-.copy-box code {
-  white-space: pre-wrap;
-}
-.copy-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #008cba;
-  color: white;
-  border: 5px;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  cursor: pointer;
-}
-.copy-btn:hover {
-  background-color: #006f98;
-}
-</style>
-
-<div class="copy-box" id="copy1">
-  <button class="copy-btn" onclick="copyCode('copy1')">Copy</button>
-  <code>
-yt-dlp -x --audio-format wav https://www.youtube.com/watch?v=bJEiV0M5kGE
-  </code>
-</div>
-
-<script>
-function copyCode(id) {
-  const el = document.getElementById(id).querySelector('code');
-  navigator.clipboard.writeText(el.innerText.trim())
-    .then(() => alert("Copied!"));
-}
 </script>
 <hr> </hr>
   <figure class="wp-block-table alignfull is-style-regular" style="font-style:normal;font-weight:700">
@@ -253,6 +160,7 @@ function copyCode(id) {
             console.error('Could not copy text: ', err);
         });
     }
+
 </script>
 # Centered Header and Copy Box
 
