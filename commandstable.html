@@ -186,3 +186,64 @@ function copyCode(id) {
     .then(() => alert("Copied!"));
 }
 </script>
+
+  <figure class="wp-block-table alignfull is-style-regular" style="font-style:normal;font-weight:700">
+    <table class="has-white-color has-text-color has-background has-link-color has-fixed-layout" style="background:linear-gradient(43deg,rgb(165,41,41) 0%,rgba(31,31,31,0.32) 56%,rgb(73,5,5) 100%)">
+        <thead>
+            <tr>
+                <th class="has-text-align-center" data-align="center">A</th>
+                <th>B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="has-text-align-center" data-align="center">Install YT-DLP (YouTube Down Loader)</td>
+                <td>
+                    <div style="display: flex; align-items: center;">
+                        <span style="text-decoration: underline">1:</span> sudo add-apt-repository ppa:tomtomtom/yt-dlp <br>
+                        <span style="text-decoration: underline">2:</span> sudo apt update <br>
+                        <span style="text-decoration: underline">3:</span> sudo apt install yt-dlp
+                        <button onclick="copyToClipboard('sudo add-apt-repository ppa:tomtomtom/yt-dlp\nsudo apt update\nsudo apt install yt-dlp')">Copy</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="has-text-align-center" data-align="center">Download The Highest Quality Video Available</td>
+                <td>
+                    <div style="display: flex; align-items: center;">
+                        yt-dlp -f “best[height>=720]”
+                        <button onclick="copyToClipboard('yt-dlp -f “best[height>=720]”')">Copy</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="has-text-align-center" data-align="center">Download Audio Only Using YT-DLP</td>
+                <td>
+                    <div style="display: flex; align-items: center;">
+                        yt-dlp -f 'ba' <url>
+                        <button onclick="copyToClipboard('yt-dlp -f \'ba\' <url>')">Copy</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="has-text-align-center" data-align="center">Download Any Format, Just Change Extension Before The Url</td>
+                <td>
+                    <div style="display: flex; align-items: center;">
+                        yt-dlp -x --audio-format wav <video-url>
+                        <button onclick="copyToClipboard('yt-dlp -x --audio-format wav <video-url>')">Copy</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Copied to clipboard');
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    }
+</script>
