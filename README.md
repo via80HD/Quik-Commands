@@ -3,6 +3,8 @@ A reference guide to quickly run a whole littny of commands etc on your Linux PC
 
 [Take A Gander At That There DiggaDer](https://via80hd.github.io/Quik-Commands/commandstable.html)
 
+[Ever Been To Frog City? Well whatcha waitin fre](https://github.com/via80HD/Quik-Commands/blob/main/frogcity.html)
+
 Ubuntu/Debian Commands
 
 | Function Of Command                                                                                             | Command To Copy           |
