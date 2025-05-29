@@ -45,10 +45,21 @@
         <tr>
             <td>Example Text in A2</td>
             <td><button onclick="copyToClipboard('Example Text in A2')">Copy</button></td>
+            <td>Install YT-DLP (YouTube Down Loader)</td>
+            <td><button onclick="copyToClipboard('1: sudo add-apt-repository ppa:tomtomtom/yt-dlp
+2: sudo apt update
+3: sudo apt install yt-dlp')"">Copy</button></td>"
+          <td>Download Audio Only Using YT-DLP</th>
+          <td><button onclick="copyToClipboard('yt-dlp -f ‘ba’ <url>')">Copy</button></td>
+          <td>Download Any Format, Just Change Extension Before The Url</th>
+      <td><button onclick="copyToClipboard('yt-dlp -x –audio-format wav <video-url>')">Copy</button></td>			
         </tr>
+      
         <tr>
             <td>Example Text in A3</td>
             <td><button onclick="copyToClipboard('Example Text in A3')">Copy</button></td>
+            <td>Download The Highest Quality Video Available</th>
+            <td><button onclick="copyToClipboard('yt-dlp -f “best[height>=720]”')">Copy</button></td>
         </tr>
     </table>
 
