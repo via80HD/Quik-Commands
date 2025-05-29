@@ -13,14 +13,14 @@
       }
       table {
           border-collapse: collapse;
-          width: 50%;
+          width: 100%;
           margin: 20px auto;
           background-color: transparent;
       }
       th, td {
-          border: 1px solid white;
+          border: for 3px solid white;
           color: white;
-          padding: 10px;
+          padding: 5px;
           text-align: center;
           background-color: transparent;
       }
@@ -30,9 +30,9 @@
       button {
           background-color: transparent;
           color: white;
-          border: 1px solid white;
+          border: 3px solid white;
           cursor: pointer;
-          padding: 5px 10px;
+          padding: 5px 5px;
       }
   </style>
 </head>
@@ -73,6 +73,8 @@
         <tr>
             <td>Example Text in A3</td>
             <td><button onclick="copyToClipboard('Example Text in A3')">Copy</button></td>
+        </tr>
+      <tr>
             <td>Download The Highest Quality Video Available</th>
             <td><button onclick="copyToClipboard('yt-dlp -f “best[height>=720]”')">Copy</button></td>
         </tr>
