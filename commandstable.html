@@ -260,13 +260,18 @@ DEPRECATION section in apt-key(8) for details”</th>
     </table>
 
     <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                alert('Copied: ' + text);
-            }, function(err) {
-                console.error('Could not copy text: ', err);
-            });
-        }
-    </script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+      // Show the "Copied!" message
+      let msg = document.getElementById('copiedMsg');
+      msg.style.display = 'inline';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 2000); // Hide after 2 seconds
+    }, function(err) {
+      console.error('Could not copy text: ', err);
+    });
+  }
+</script>
 </body>
 </html>
