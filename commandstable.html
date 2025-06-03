@@ -43,7 +43,183 @@
             <th>Code To Copy</th>
             <th>Copy Button</th>
         </tr>
-      
+      "<tr><td>Copy File To Another Place</td>
+<td>cp</td>
+<td><button onclick=""copyToClipboard('cp')"">Copy</button></td></tr>
+<tr><td>Create a .txt File of All Installed Apps</th>
+<td>apt list –installed > .txt</th>
+<td><button onclick=""copyToClipboard('apt list –installed > .txt')"">Copy</button></td></tr>
+<tr><td>Combine Multiple .mp3 Files Into 1 Mp3</th>
+<td>1: sudo apt-get install mp3wrap 
+2: mp3wrap output.mp3 *.mp3</th>
+<td><button onclick=""copyToClipboard('1: sudo apt-get install mp3wrap 
+2: mp3wrap output.mp3 *.mp3')"">Copy</button></td></tr>
+<tr><td>How to Extract a Tar File</th>
+<td>tar -xf file_name</th>
+<td><button onclick=""copyToClipboard('tar -xf file_name')"">Copy</button></td></tr>
+<tr><td>How to Extract a Zip File</th>
+<td>unzip file_name</th>
+<td><button onclick=""copyToClipboard('unzip file_name')"">Copy</button></td></tr>
+<tr><td>List All Installed Repos</th>
+<td>sudo grep -rhe ^deb /etc/apt/sources.list*</th>
+<td><button onclick=""copyToClipboard('sudo grep -rhe ^deb /etc/apt/sources.list*')"">Copy</button></td></tr>
+<tr><td>To Remove a Repo</th>
+<td>sudo add-apt-repository –remove ppa:</th>
+<td><button onclick=""copyToClipboard('sudo add-apt-repository –remove ppa:')"">Copy</button></td></tr>
+<tr><td>Search for an app on your system</th>
+<td>apt list –installed | grep -i</th>
+<td><button onclick=""copyToClipboard('apt list –installed | grep -i')"">Copy</button></td></tr>
+<tr><td>How To Copy & Rename</th>
+<td>cp [path/to/file] [destination/New_File_name]</th>
+<td><button onclick=""copyToClipboard('cp [path/to/file] [destination/New_File_name]')"">Copy</button></td></tr>
+<tr><td>Convert PDF to EPUB (Requires Calibre)</th>
+<td>ebook-convert file.pdf file.epub</th>
+<td><button onclick=""copyToClipboard('ebook-convert file.pdf file.epub')"">Copy</button></td></tr>
+<tr><td>If EPUB looks like shit, add this to the end</th>
+<td>–enable-heuristics</th>
+<td><button onclick=""copyToClipboard('–enable-heuristics')"">Copy</button></td></tr>
+<tr><td>Display all the files that come with a package (app)</th>
+<td>dpkg -L</th>
+<td><button onclick=""copyToClipboard('dpkg -L')"">Copy</button></td></tr>
+<tr><td>DL a .deb package of any app downloadable via apt</th>
+<td>apt download</th>
+<td><button onclick=""copyToClipboard('apt download')"">Copy</button></td></tr>
+<tr><td>Brave repository error when trying to run ‘sudo apt update’ that says’ 
+“…doesn’t support architecture ‘i386’ error”</th>
+<td>Gotta add arch=amd64 to repo list file. 
+1 . run: cd /etc/apt/sources.list.d/ 
+2. run: ls
+3. Find your matching source list file & type the following command: 
+sudo nano /etc/apt/sources.list.d/
+4. On the screen you are taken to, you will need to click the right arrow 5 
+times then type the following & dont forget the space at the end after 4
+arch=amd64 
+5. Should look like the following at the front:
+deb* [arch=amd64* signed…….
+6. Save it with ctrl+x, then type ‘y’ & click enter. 
+7. run sudo apt update & should be working now.</th>
+<td><button onclick=""copyToClipboard('Gotta add arch=amd64 to repo list file. 
+1 . run: cd /etc/apt/sources.list.d/ 
+2. run: ls
+3. Find your matching source list file & type the following command: 
+sudo nano /etc/apt/sources.list.d/
+4. On the screen you are taken to, you will need to click the right arrow 5 
+times then type the following & dont forget the space at the end after 4
+arch=amd64 
+5. Should look like the following at the front:
+deb* [arch=amd64* signed…….
+6. Save it with ctrl+x, then type ‘y’ & click enter. 
+7. run sudo apt update & should be working now.')"">Copy</button></td></tr>
+<tr><td>How to see if the PC is even seeing your USB/HDD (This is for when a usb 
+isnt even showing when plugged in.)</th>
+<td>1. Unplug the device you are testing for
+2. Run the following command
+ls /dev/ | grep sd
+3. Plug your device back in & re run the same command
+4. If there is more lines after the 2nd time you ran it, that means the PC 
+is seeing your USB. If the number of lines turns out to be the exact same 
+as the first, that means the PC is not seeing your USB & will need to 
+investigate further.</th>
+<td><button onclick=""copyToClipboard('1. Unplug the device you are testing for
+2. Run the following command
+ls /dev/ | grep sd
+3. Plug your device back in & re run the same command
+4. If there is more lines after the 2nd time you ran it, that means the PC 
+is seeing your USB. If the number of lines turns out to be the exact same 
+as the first, that means the PC is not seeing your USB & will need to 
+investigate further.')"">Copy</button></td></tr>
+<tr><td>Location Where KDE 6 Themes Shall Be Extracted To If You Want To Actually 
+Use It.</th>
+<td>/home//.local/share/plasma/look-and-feel/</th>
+<td><button onclick=""copyToClipboard('/home//.local/share/plasma/look-and-feel/')"">Copy</button></td></tr>
+<tr><td>Location Where To Extract KDE 6 Cursor Themes (Yes, I know themees aren’t 
+icons but it works, truss)</th>
+<td>/usr/share/icons/
+(use sudo mv to move)</th>
+<td><button onclick=""copyToClipboard('/usr/share/icons/
+(use sudo mv to move)')"">Copy</button></td></tr>
+<tr><td>Where To Go To Add An Alias</th>
+<td>nano ~/.bashrc</th>
+<td><button onclick=""copyToClipboard('nano ~/.bashrc')"">Copy</button></td></tr>
+<tr><td>Template For Creating An Alias aka Command LIne Shortcut:
+command_name: function name
+command_here: actual command
+alias_name: shortcut name to run</th>
+<td>command_name() { command_here “$@” } alias_name=’sudo command_name’</th>
+<td><button onclick=""copyToClipboard('command_name() { command_here “$@” } alias_name=’sudo command_name’')"">Copy</button></td></tr>
+<tr><td>3. Refresh Your bashrc</th>
+<td>*source ~/.bashrc*</th>
+<td><button onclick=""copyToClipboard('*source ~/.bashrc*')"">Copy</button></td></tr>
+<tr><td>Delete All Files In a Folder Of A Specific Extension</th>
+<td>rm *.
+example:
+rm *.wav</th>
+<td><button onclick=""copyToClipboard('rm *.
+example:
+rm *.wav')"">Copy</button></td></tr>
+<tr><td>To start the Bluetooth service</th>
+<td>sudo systemctl start bluetooth.service</th>
+<td><button onclick=""copyToClipboard('sudo systemctl start bluetooth.service')"">Copy</button></td></tr>
+<tr><td>*How to remove bloat from android using ABD*</th>
+<td>PRE STEPS: Before starting you need to download ADB (step 1 below) & turn 
+on developer settings & USB Debug. Look it up on YT
+1. Install adb via \
+*‘sudo apt install adb -y’*
+2. Verify your phone is actually connected to PC using the command
+* ‘adb devices’*
+3. If something shows up your good. Run the following command to list all 
+packages, add a ‘-s’ to filter for only system apps. 
+
+*‘adb shell pm list packages’‘adb shell pm list packages -s’*
+
+3.5 Or you can run the following command but replace the ‘’ like that with 
+a search term for the bloat you want to delete.
+Ex. 1 ‘*adb shell pm list packages | grep ‘<‘facebook’>’*
+Ex. 2 ”’adb shell pm list packages | grep ‘<‘moto’>’
+**IMPORTANT, make sure to have the quotes around your search term. 
+4. Once you find one you want to delete, run the following except with your 
+app. I will use facebook in my example.
+Option 1 Disable App:* ‘adb shell pm disable -user –user 0 
+com.facebook.appmanager*
+
+Option 2 Uninstall Totally: *‘adb shell pm uninstall -user –user 0 
+com.facebook.appmanager*</th>
+<td><button onclick=""copyToClipboard('PRE STEPS: Before starting you need to download ADB (step 1 below) & turn 
+on developer settings & USB Debug. Look it up on YT
+1. Install adb via \
+*‘sudo apt install adb -y’*
+2. Verify your phone is actually connected to PC using the command
+* ‘adb devices’*
+3. If something shows up your good. Run the following command to list all 
+packages, add a ‘-s’ to filter for only system apps. 
+
+*‘adb shell pm list packages’‘adb shell pm list packages -s’*
+
+3.5 Or you can run the following command but replace the ‘’ like that with 
+a search term for the bloat you want to delete.
+Ex. 1 ‘*adb shell pm list packages | grep ‘<‘facebook’>’*
+Ex. 2 ”’adb shell pm list packages | grep ‘<‘moto’>’
+**IMPORTANT, make sure to have the quotes around your search term. 
+4. Once you find one you want to delete, run the following except with your 
+app. I will use facebook in my example.
+Option 1 Disable App:* ‘adb shell pm disable -user –user 0 
+com.facebook.appmanager*
+
+Option 2 Uninstall Totally: *‘adb shell pm uninstall -user –user 0 
+com.facebook.appmanager*')"">Copy</button></td></tr>
+<tr><td>Fix This:
+“…/Release.gpg: Key is stored in legacy trusted.gpg keyring…..see the 
+DEPRECATION section in apt-key(8) for details”</th>
+<td>1. cd /etc/apt
+
+2. sudo cp trusted.gpg trusted.gpg.d
+
+3. Should be fixed, just run sudo apt update to check</th>
+<td><button onclick=""copyToClipboard('1. cd /etc/apt
+
+2. sudo cp trusted.gpg trusted.gpg.d
+
+3. Should be fixed, just run sudo apt update to check')"">Copy</button></td></tr>"
         <tr>
             <td>Install YT-DLP (YouTube Down Loader)</td>
             <td>1: sudo add-apt-repository ppa:tomtomtom/yt-dlp
